@@ -1,0 +1,151 @@
+// ### Primary
+
+$Orange: hsl(25, 97%, 53%);
+
+// / ### Neutral
+
+$White: hsl(0, 0%, 100%);
+$Light-Grey: hsl(217, 12%, 63%);
+$Medium-Grey: hsl(216, 12%, 54%, 0.2);
+$Dark-Blue: hsl(213, 19%, 18%);
+$Very-Dark-Blue: hsl(216, 12%, 8%);
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .card {
+    background-color: $Dark-Blue;
+    width: 75%;
+    max-width: 640px;
+    border-radius: 30px;
+    padding: 48px;
+
+    .star {
+      background-color: $Medium-Grey;
+      width: fit-content;
+      padding: 28px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 15px;
+      }
+    }
+
+    .title {
+      font-size: 40px;
+      color: $White;
+      margin-top: 14px;
+    }
+    .text {
+      color: $Light-Grey;
+      font-size: 20px;
+      line-height: 20px;
+      margin-top: 5px;
+    }
+    .rating-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      .rating-btn {
+        color: $Light-Grey;
+        font-size: 28px;
+        font-weight: 900;
+        background-color: $Medium-Grey;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 15px;
+        padding: 28px;
+
+        div {
+          transform: translateY(5%);
+        }
+        &:hover {
+          background-color: $Orange;
+          cursor: pointer;
+
+          div {
+            color: $White;
+          }
+        }
+      }
+      .active {
+        background-color: $Light-Grey;
+
+        div {
+          color: $White;
+        }
+      }
+    }
+    .submit-btn {
+      background-color: $Orange;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
+      padding: 20px;
+      border-radius: 60px;
+
+      div {
+        text-transform: uppercase;
+        color: $White;
+        font-size: 35px;
+        letter-spacing: 2px;
+      }
+      &:hover {
+        background-color: $White;
+        cursor: pointer;
+
+        div {
+          color: $Orange;
+          font-weight: 700;
+        }
+      }
+    }
+    .card-content-2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: 220px;
+        margin-top: 15px;
+        margin-bottom: 2px;
+      }
+
+      .text {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .result {
+        background-color: $Medium-Grey;
+        padding: 6px 20px;
+        border-radius: 30px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+
+        div {
+          color: $Orange;
+          font-size: 21px;
+          font-weight: bolder;
+        }
+      }
+    }
+    .hide {
+      display: none;
+    }
+  }
+}
